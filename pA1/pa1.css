@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(206, 204, 171);
+}
+h1{
+    color: rgba(65, 20, 10, 0.963);
+}
+h2{
+    text-align: center;
+    color: rgb(95, 16, 5);
+    background-color: bisque;
+}
+#increment-btn{
+    position:relative;
+    width: 200px;
+    text-align: center;
+    margin-left: 40%;
+    background-color: brown;
+}
+p{
+    background-color: beige;
+}
+#save-btn{
+    background-color: green;
+    margin-left: 42.5%;
+    width: 123px;
+    padding: 0 2px ;
+}
+img{
+    position: absolute;
+    box-sizing: border-box;
+    align-items: center;
+    
+}
