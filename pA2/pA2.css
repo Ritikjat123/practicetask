@@ -1,0 +1,22 @@
+*{
+    border: 0px;
+    margin: 0px;
+}
+#purchase{
+    background-color: rgb(17, 150, 150);
+    border: 0cap;
+    border-radius:2px solid black;
+    padding: 4px 3px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: normal;
+    font-size: medium;
+    
+}
+#brandname{
+    background-color: rgb(20, 198, 195);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-optical-sizing:auto;
+}
+#error{
+    color: red;
+}
