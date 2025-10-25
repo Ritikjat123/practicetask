@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    background-color: rgba(191, 193, 185, 0.981);
+    
+}
+#main-btn{
+    background-color: rgba(226, 224, 207, 0.944);
+    border: 2px solid rgb(18, 19, 19);
+    border-radius: 2px solid black;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+    font: bold;
+    color: rgb(22, 54, 54);
+}
+#main-btn:hover{
+    background-color: rgba(67, 56, 52, 0.801);
+    color: aliceblue;
+}
+#top{
+    background-color: rgb(17, 17, 17);
+}
+div#bg-img{
+    background-image: url(interior-modern-living-room-with-wooden-sofa-black-coffee_1001743-6684.avif);
+    height: 100px;
+    background-size: cover;
+}
+#shop-section{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(28, 28, 28);
+}
+.box{
+    border: 2px solid rgb(90, 93, 94);
+    width: 23%;  
+    height: 400px;
+    background-color: rgb(236, 238, 238);
+}
+#bg-para1{
+
+    padding-left: 2px;
+    -webkit-text-stroke: 0.5px;
+    text-decoration: rgb(246, 239, 239);
+    color: azure;
+}
+#bg-para1:hover{
+    background-color: rgb(65, 62, 58);
+}
+#shop-section2{
+    justify-content: space-evenly;
+    background-color: rgb(31, 34, 34);
+    display: flex;
+    border-radius: 2px solid white;
+}
+#whole{
+    display: flex;
+    background-color: rgb(110, 128, 137);
+}
+#new{
+    color: rgb(21, 92, 125);
+}
+#clothes{
+    color: rgb(228, 0, 0);
+    width: 46%;
+}
+h2{
+    background-color: rgb(182, 189, 189);
+    color: rgb(58, 49, 48);
+}
