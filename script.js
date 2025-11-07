@@ -1,61 +1,92 @@
+// 1. Remove duplicates from array 
+// ip [1, 2, 2, 3, 4, 4, 5, 6, 5]
+// op [1, 2, 3, 4, 5, 6]
+let inputArr=[1,2,2,3,4,4,5,6,5];
+let outputArr=[];
 
-// function apiCall(url){
-  
-//        fetch(url)
-//        .then((res)=>res.json())
-//   .then(
-//     (data)=>console.log(data,"data is fetched")
+
+for(let item of inputArr){
     
-//   ).catch((err)=>reject(err,"error"))
-// }
-// apiCall("https://fakestoreapi.com/products");
+    if(!outputArr.includes(item)){
+        outputArr.push(item);
+    }
+}
+console.log("output of 1st que is ",outputArr);
 
-// let arr=[1,4,7,5,3,2];
 
-// for(let i =0;i<arr.length;i++){
-// for(let j=0;j<arr.length;j++){
-//  if(arr[i]>arr[j]){
-//     let temp=arr[j]
-//     arr[j]=arr[i]
-//     arr[i]=temp;
-//  }
-// }
 
-// }console.log(arr)
+// 2. Count occurrence of each character in string
+// "aabcgd"
+// { a: 2, b: 1, c: 1, g: 1, d: 1 }
 
-// let arr=[1,4,7,5,3,2];
+let str="aabcgd";
+let charCount={};
 
-// for(let i =0;i<arr.length;i++){
-// for(let j=0;j<arr.length;j++){
-//  if(arr[i]<arr[j]){
-//     let temp=arr[j]
-//     arr[j]=arr[i]
-//     arr[i]=temp;
-//  }
-// }
 
-/ / }console.log(arr)
+for(let char of str){
 
-// let arr=[1,4,7,5,3,2];
+    charCount[char]=(charCount[char] || 0)+1;
 
-// for(let i =0;i<arr.length;i++){
-// let temp = arr[i]*2;
-// arr[i]=temp
+}
+console.log("char count program ",charCount);
 
-// }console.log(arr)
 
-// let arr=[1,4,7,5,3,99,2];
-// let arr2=[];
-// for(let i =0;i<arr.length;i++){
-// for(let j=0;j<arr.length;j++){
-//  if(arr[i]<arr[j]){
-//     let temp=arr[j]
-//     arr[j]=arr[i]
-//     arr[i]=temp;
-//  }
-// }
-// }console.log(arr)
-// for(let i=0;i<arr.length;i++){
-//   console.log(arr[i]*2)
-// }
 
+
+
+// 3. Flatten nested array (custom logic)
+// [1, [2, [3, 4], 5], 6]
+// [1, 2, 3, 4, 5, 6]
+
+let nestedArr=[1, [2, [3, 4], 5], 6]; 
+
+
+function flattenedArray(arr){
+    let result=[];
+
+
+    for(let item of arr){
+        if(Array.isArray(item)){
+
+
+            result=result.concat(flattenedArray(item));
+
+
+        }else{
+            result.push(item);
+        }
+    }
+    return result;
+}
+let flatArr=flattenedArray(nestedArr);
+console.log("flattened array is : ",flatArr);
+
+
+
+
+
+// 4. Count vowels and consonants in a string
+// "HelloWorld"
+// { vowels: 3, consonants: 7 }
+
+
+
+let inputStr="HelloWorld";
+
+let vowelsCount=0;
+let consonantsCount=0;
+
+
+
+for(let char of inputStr.toLowerCase()){
+    if('aeiou'.includes(char)){
+
+        vowelsCount++;
+
+
+    }
+    else if(char >= 'a' && char <= 'z'){
+        consonantsCount++;
+    }
+}
+console.log("vowels  and consonants count is : ", {vowels: vowelsCount, consonants: consonantsCount});
