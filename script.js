@@ -1,92 +1,62 @@
-// 1. Remove duplicates from array 
-// ip [1, 2, 2, 3, 4, 4, 5, 6, 5]
-// op [1, 2, 3, 4, 5, 6]
-let inputArr=[1,2,2,3,4,4,5,6,5];
-let outputArr=[];
+// a me fun ki puri body print ho jayegi kyuki a me fun ki body store hui h
+// console.log(a());
+// function a(){
+//     console.log("hello");
+// }
+
+//var me hoisting ki wjh se undefined aayega
+// var x=20;
+// function printValue(){
+//     console.log(x); //ans is undefined bcs access x without declare
+//     var x=10;
+// }
+// printValue();
+
+// 20 20 10 aayega because first clg is before fun and x is made by var and in the block we print x and then we update value of x to 10
+//  var x=20;
+// function printValue1(){
+//     console.log(x);
+//      x=10;
+//      console.log(x);
+
+// }
+// console.log(x);
+// printValue1();
 
 
-for(let item of inputArr){
-    
-    if(!outputArr.includes(item)){
-        outputArr.push(item);
-    }
-}
-console.log("output of 1st que is ",outputArr);
+//start end setTime because of the syncronomous and asyncronomous code the console is syncronomous code so it directly in call stack in the execution phase and the asyncronomous code is settimeout which is in macro que so it execute after syncronomous code so this output
+// console.log("start ");
+// setTimeout(()=>{
+//     console.log("setTime");
+// },0);
+// console.log("end");
+
+//reference error y is not defined and then code terminated
+// console.log(y);
+// console.log(typeof(y));
+
+// function abc() {
+//   a = 10;
+//   b = 20;
+//   console.log(a);//10
+//   console.log(b);//20
+// }
+// abc();
+// console.log(a);//10
+// console.log(b);//20
 
 
+// console.log([1,2,3]==[1,2,3]);//false // because array is an object and both have different address in memory it compare the address of both
+// console.log({ name: "a" } == { name: "a" });//false because both are different object in memory their address is different
 
-// 2. Count occurrence of each character in string
-// "aabcgd"
-// { a: 2, b: 1, c: 1, g: 1, d: 1 }
+// console.log(name);
+// var name = "John";//empty string because of hoisting and fname is reserved word
 
-let str="aabcgd";
-let charCount={};
+// setTimeout(() => {
+//   console.log("I am setTime out ");
+// });
+// Promise.resolve().then(() => {
+//   console.log("I am Promise  ");
+// });
+// console.log("I am end here ");
 
-
-for(let char of str){
-
-    charCount[char]=(charCount[char] || 0)+1;
-
-}
-console.log("char count program ",charCount);
-
-
-
-
-
-// 3. Flatten nested array (custom logic)
-// [1, [2, [3, 4], 5], 6]
-// [1, 2, 3, 4, 5, 6]
-
-let nestedArr=[1, [2, [3, 4], 5], 6]; 
-
-
-function flattenedArray(arr){
-    let result=[];
-
-
-    for(let item of arr){
-        if(Array.isArray(item)){
-
-
-            result=result.concat(flattenedArray(item));
-
-
-        }else{
-            result.push(item);
-        }
-    }
-    return result;
-}
-let flatArr=flattenedArray(nestedArr);
-console.log("flattened array is : ",flatArr);
-
-
-
-
-
-// 4. Count vowels and consonants in a string
-// "HelloWorld"
-// { vowels: 3, consonants: 7 }
-
-
-
-let inputStr="HelloWorld";
-
-let vowelsCount=0;
-let consonantsCount=0;
-
-
-
-for(let char of inputStr.toLowerCase()){
-    if('aeiou'.includes(char)){
-
-        vowelsCount++;
-
-
-    }
-    else if(char >= 'a' && char <= 'z'){
-        consonantsCount++;
-    }
-}
-console.log("vowels  and consonants count is : ", {vowels: vowelsCount, consonants: consonantsCount});
